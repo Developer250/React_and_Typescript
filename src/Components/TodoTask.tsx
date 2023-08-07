@@ -3,12 +3,11 @@ import { Itask } from "../Interfaces";
 
 
 interface props {
-    task?: Itask;
+    task: Itask;
 }
 
-const todoTask = ({ task }: props) => {
+const TodoTask = ({ task }: props) => {
     return <div>
-        task
-    </div>
+        {task.taskName} {task.deadline} </div>
 };
-export default todoTask; 
+export default TodoTask; 

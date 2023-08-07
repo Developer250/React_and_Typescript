@@ -1,6 +1,8 @@
 import React, { ChangeEvent, FC, useState } from 'react';
 import './App.css';
+import TodoTask from './Components/TodoTask';
 import { Itask } from './Interfaces';
+
 
 
 const App: FC = () => {
@@ -36,11 +38,9 @@ const App: FC = () => {
             </div>
             <div className="todoList">
                 {todoList.map((task: Itask, key: number) => {
-                    return <todoTask key={key}></todoTask>
-                })};
+                    return <TodoTask key={key} task={task}></TodoTask>;
+                })}
                     
-                
-
             </div>
         </div> 
     );

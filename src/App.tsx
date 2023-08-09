@@ -6,6 +6,7 @@ import { Itask } from './Interfaces';
 
 
 const App: FC = () => {
+    //Alustetaan tehtävänimike ja eräpäivä sekä tehtävälista
 
     const [task, setTask] = useState<string>("");
     const [deadline, setDeadline] = useState<number>(0);

@@ -81,6 +81,16 @@ body {
     background-color:red;
 }
 
+.task button {
+    flex:20%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius:8px;
+    border: none;
+    height: 100%;
+    font-size: 18px;
+    background-color: deepskyblue;
+    cursor:pointer;
+    }
 
 
 

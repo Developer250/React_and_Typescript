@@ -12,6 +12,7 @@ const App: FC = () => {
     const [deadline, setDeadline] = useState<number>(0);
     const [todoList, setTodoList] = useState<Itask[]>([]);
 
+    //handleChange-funktio, jota kutsutaan aina, kun käyttäjän syötteissä tekemissä syötteissä tapahtuu muutoksia
     const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
         if (event.target.name === "task") {
             setTask(event.target.value)
@@ -21,10 +22,11 @@ const App: FC = () => {
         }
     };
 
+    //Kutsutaan addTask-nappia, kun käyttäjä klikkaa nappia
+    //Asetetaan setTodolist (eli tehtävä). Uuden tehtävän lisäys, kun käyttäjä klikkaa uuden tehtävän
     const addTask = (): void => {
         const newTask = { taskName: task, deadline: deadline }
         setTodoList([...todoList, newTask])
-        console.log(todoList);
     }
 
 
@@ -34,9 +36,9 @@ const App: FC = () => {
         }))
     };
 
-    
-
-
+    //Käyttäjän syöttämä teksti-input sekä deadline-input syöttö laatikot ja buttoni, joka lisää syötetyt arvot näytölle
+    //sekä käyttäjä voi poistaa tehtävät
+    //todoList.map -kohdassa käydään läpi jokainen elementti listassa ja tulostetaan näytölle eli käy
     return (
         <div className="App">
             <div className="header">
@@ -46,11 +48,11 @@ const App: FC = () => {
                 </div>
                 <button onClick={addTask} >Press</button>
             </div>
+            
             <div className="todoList">
                 {todoList.map((task: Itask, key: number) => {
                     return <TodoTask key={key} task={task} completeTask={completeTask}></TodoTask>;
-                })}
-                    
+                })}    
             </div>
         </div> 
     );

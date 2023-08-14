@@ -3,7 +3,7 @@ import { Itask } from "../Interfaces";
 
 //M‰‰ritell‰‰n ominaisuuksisa varten ehdotukset, jotka toiminnallinen komponentti joutuu hyv‰ksym‰‰n
 //eli k‰ytt‰j‰ voi hyv‰ksy‰ teht‰v‰n
-//K‰ytt‰j‰ voi poistaa teht‰v‰n//ITask on t‰ss‰ tyyppi.xp
+//K‰ytt‰j‰ voi poistaa teht‰v‰n//ITask on t‰ss‰ tyyppi
 interface props {
     task: Itask;
     completeTask(taskNameToDelete: string): void;
